@@ -316,6 +316,45 @@ footer {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.zapisz-sie {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.przycisk-zapisz-sie {
+  font-family: "Roboto";
+  font-style: bold;
+  /* font-weight: 700; */
+  font-size: 16px;
+  line-height: 30px;
+  /* align: center;
+  vertical-align: center; */
+  /* display: flex; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  padding-right: 76px;
+  /* margin-top: 30px; */
+  /* margin-left: auto;
+  margin-right: auto; */
+  letter-spacing: 6%;
+  color: #ffffff;
+  fill: white;
+  background-color: var(--kolor-logo);
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+}
+
+.icon-zapisz-sie {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 24px;
+  fill: var(--kolor-kontakt);
+}
+
 .kolumna-obrazow {
   display: flex;
   flex-direction: column;
@@ -584,6 +623,7 @@ footer {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
+  margin-right: 12px;
 }
 
 .backdrop {
