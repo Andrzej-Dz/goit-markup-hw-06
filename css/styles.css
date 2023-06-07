@@ -352,7 +352,7 @@ footer {
   justify-content: right;
   align-items: center;
   gap: 24px;
-  fill: var(--kolor-kontakt);
+  fill: #ffffff;
 }
 
 .kolumna-obrazow {
