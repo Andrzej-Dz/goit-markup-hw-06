@@ -64,11 +64,7 @@
             EFEKTYWNE ROZWIĄZANIA <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button
-            class="przycisk-usluga przycisk-aktywny"
-            type="button"
-            data-modal-open
-          >
+          <button class="przycisk-usluga" type="button" data-modal-open>
             Zamów usługę
           </button>
         </div>
@@ -314,7 +310,7 @@
           </div>
           <address>
             <p class="kontakt kontakt-adres">
-              m. Warszawa, Al.Jerozolimskie 21
+              m. Warszawa, Aleje Jerozolimskie 21
             </p>
             <p class="kontakt kontakt-stopka" style="padding-top: 8px">
               info@devstudio.com
@@ -349,21 +345,22 @@
             </div>
           </div>
         </div>
-        <div>
+        <div style="margin-left: 8px">
           <p class="stopka-2">ZAPISZ SIĘ DO NEWSLETTERA</p>
           <div class="zapisz-sie" ;>
             <div class="newsletter">
-              <p>E-mail</p>
+              <form>
+                <label> E-mail </label>
+              </form>
             </div>
-
-            <!-- <button class="przycisk-zapisz-sie przycisk-aktywny"> -->
-            <p>Zapisz się</p>
-            <div class="icon-zapisz-sie" ;>
-              <svg width="24" height="24">
-                <use href="./images/icons.svg#icon-send"></use>
-              </svg>
+            <div>
+              <button class="przycisk-zapisz-sie" type="submit">
+                Zapisz się
+                <svg class="icon-zapisz-sie" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
             </div>
-            <!-- </button> -->
           </div>
         </div>
       </div>
@@ -371,6 +368,58 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
+        <p class="modal-naglowek">Zostaw swoje dane w formularzu poniżej</p>
+
+        <form class="formularz-uslug">
+          <label> Imie </label>
+          <div class="pole-formularza">
+            <svg width="15" height="15">
+              <use href="./images/icons.svg#icon-user"></use>
+            </svg>
+            <input type="text" name="imie" />
+          </div>
+
+          <label> Telefon </label>
+          <div class="pole-formularza">
+            <svg width="15" height="15">
+              <use href="./images/icons.svg#icon-telefon"></use>
+            </svg>
+            <input type="tel" name="telefon" />
+          </div>
+
+          <label> Email </label>
+          <div class="pole-formularza">
+            <svg width="15" height="15">
+              <use href="./images/icons.svg#icon-mail"></use>
+            </svg>
+            <input type="email" name="email" />
+          </div>
+
+          <label> Komentarz </label>
+          <textarea
+            name="komentarz"
+            placeholder="Wprowadź tekst ..."
+          ></textarea>
+
+          <div class="akcept-regulamin">
+            <input
+              type="checkbox"
+              width="16px"
+              height="15px"
+              name="regulamin"
+              value="akcept"
+              required
+            />
+            <label>
+              Oświadczam iż akceptuję
+              <a href="#">Regulamin</a>
+              i
+              <a href="#">Politykę Prywatności.</a>
+            </label>
+          </div>
+        </form>
+
+        <button type="submit" class="przycisk-wyslij">Wyślij</button>
       </div>
     </div>
     <script src="./js/modal.js"></script>

@@ -8,6 +8,9 @@
   --kolor-tlo: #e5e5e5;
   --kolor-ramki-zdjec: #eeeeee;
   --kolor-ikon: #afb1b8;
+  --kolor-standard: #ffffff;
+  --cien: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --f-czasu: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -16,7 +19,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: var(--kolor-standard);
   text-decoration: none;
   font-family: "Roboto";
   font-style: normal;
@@ -34,7 +37,7 @@ h1 {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: white;
+  color: var(--kolor-standard);
 }
 
 img {
@@ -57,7 +60,7 @@ button,
 
 footer {
   background-color: var(--kolor-stopka);
-  color: white;
+  color: var(--kolor-standard);
   padding: 60px 0px;
 }
 
@@ -98,7 +101,7 @@ footer {
 
 .naglowek {
   display: flex;
-  background-color: white;
+  background-color: var(--kolor-standard);
   align-items: center;
   padding-top: 24px;
   padding-bottom: 25px;
@@ -155,7 +158,7 @@ footer {
 }
 
 .logo > .logo-stopka-dol {
-  color: white;
+  color: var(--kolor-standard);
 }
 
 .nawigator {
@@ -175,7 +178,6 @@ footer {
   color: var(--kolor-logo);
 }
 
-/* .link:hover::after, */
 .link-aktywny::after {
   display: block;
   content: "";
@@ -209,7 +211,7 @@ footer {
   color: var(--kolor-logo);
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .kontakt {
@@ -257,7 +259,7 @@ footer {
   color: var(--kolor-logo);
   transition-property: fill, color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .wiersz-przyciskow {
@@ -298,61 +300,72 @@ footer {
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: var(--kolor-logo);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: var(--kolor-standard);
+  background-color: var(--kolor-logo);
+  box-shadow: var(--cien);
   border-radius: 4px;
 }
 
 .przycisk:hover,
 .przycisk:focus {
-  color: white;
+  color: var(--kolor-standard);
   background-color: var(--kolor-logo);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   transition-property: background-color, color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .zapisz-sie {
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  gap: 12px;
 }
 
 .przycisk-zapisz-sie {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   font-family: "Roboto";
   font-style: bold;
-  /* font-weight: 700; */
+  font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
-  /* align: center;
-  vertical-align: center; */
-  /* display: flex; */
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 42px;
-  padding-right: 76px;
-  /* margin-top: 30px; */
-  /* margin-left: auto;
-  margin-right: auto; */
-  letter-spacing: 6%;
-  color: #ffffff;
-  fill: white;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--kolor-standard);
+  fill: var(--kolor-standard);
   background-color: var(--kolor-logo);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+  box-shadow: var(--cien);
+  border-radius: 4px;
+}
+
+.przycisk-wyslij {
+  font-style: bold;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  width: 200px;
+  height: 50px;
+  padding: 10px 0px;
+  text-align: center;
+  margin-top: 30px;
+  color: var(--kolor-standard);
+  background-color: var(--kolor-logo);
+  box-shadow: var(--cien);
   border-radius: 4px;
 }
 
 .icon-zapisz-sie {
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
   align-items: center;
-  gap: 24px;
-  fill: #ffffff;
+  /* margin-right: 28px; */
+  fill: var(--kolor-standard);
 }
 
 .kolumna-obrazow {
@@ -388,7 +401,7 @@ footer {
     1px 4px 6px rgba(0, 0, 0, 0.16);
   transition-property: box-shadow;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .wiersz-obrazow div div {
@@ -403,7 +416,7 @@ footer {
 
 .wiersz-zespolu > div {
   border-radius: 0px 0px 4px 4px;
-  background-color: white;
+  background-color: var(--kolor-standard);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 }
@@ -425,7 +438,7 @@ footer {
   height: 100%;
   transform: translatey(100%);
   background-color: var(--kolor-logo);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms var(--f-czasu);
 }
 
 .wiersz-obrazow > div:hover .overlay,
@@ -433,7 +446,7 @@ footer {
   transform: translatex(0%);
   transition-property: transform;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .overlay p {
@@ -552,18 +565,18 @@ footer {
   fill: var(--kolor-logo);
   transition-property: fill, border-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .kolo {
   display: flex;
   width: 44px;
   height: 44px;
-  gap: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   justify-content: center;
   align-items: center;
+  gap: 10px;
 }
 
 .kolo:hover,
@@ -571,7 +584,7 @@ footer {
   background-color: var(--kolor-logo);
   transition-property: background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .icon-social-media {
@@ -587,7 +600,7 @@ footer {
   justify-content: center;
   gap: 10px;
   margin-bottom: 30px;
-  fill: white;
+  fill: var(--kolor-standard);
 }
 
 .kolo-biale {
@@ -603,15 +616,15 @@ footer {
 .kolo-biale:hover,
 .kolo-biale:focus {
   background-color: var(--kolor-logo);
-  fill: white;
+  fill: var(--kolor-standard);
   transition-property: fill, background-color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: var(--f-czasu);
 }
 
 .newsletter {
   border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  filter: drop-shadow(var(--cien));
   border-radius: 4px;
   width: 358px;
   height: 50px;
@@ -623,7 +636,6 @@ footer {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   padding: 15px 16px;
-  margin-right: 12px;
 }
 
 .backdrop {
@@ -656,6 +668,13 @@ footer {
   width: 528px;
   min-height: 581px;
   background-color: #fff;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .close-btn {
@@ -668,4 +687,111 @@ footer {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.modal-naglowek {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(-- --kolor-domyslny);
+}
+
+.formularz-uslug {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 4px;
+}
+
+.formularz-uslug > label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: var(--kolor-kontakt);
+  border-color: var(--kolor-kontakt);
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+
+.pole-formularza {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  margin-bottom: 6px;
+  padding: 0px 15px;
+  gap: 15px;
+}
+
+.pole-formularza > input,
+.formularz-uslug textarea {
+  width: 100%;
+  border: 0px solid;
+}
+
+.pole-formularza > input:focus,
+.formularz-uslug textarea:focus {
+  outline: none;
+}
+
+.formularz-uslug textarea {
+  padding: 12px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  width: 100%;
+  text-align: top left;
+}
+
+.formularz-uslug textarea {
+  resize: none;
+  height: 120px;
+}
+
+.akcept-regulamin {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  line-height: 24px;
+  color: var(--kolor-kontakt);
+  width: 100%;
+  gap: 9px;
+  padding-left: 15px;
+  align-items: center;
+}
+
+.akcept-regulamin > input {
+  width: auto;
+  margin-bottom: 0px;
+}
+
+.akcept-regulamin a {
+  /* text-decoration: none; */
+  color: var(--kolor-logo);
+}
+
+.pole-formularza:hover,
+.pole-formularza:focus,
+.formularz-uslug textarea:hover,
+.formularz-uslug textarea:focus {
+  border-color: var(--kolor-logo);
+  fill: var(--kolor-logo);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--f-czasu);
 }
