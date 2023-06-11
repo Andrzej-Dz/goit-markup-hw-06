@@ -347,7 +347,7 @@
         </div>
         <div style="margin-left: 8px">
           <p class="stopka-2">ZAPISZ SIĘ DO NEWSLETTERA</p>
-          <div class="zapisz-sie" ;>
+          <div class="zapisz-sie">
             <div class="newsletter">
               <form>
                 <label> E-mail </label>
@@ -369,7 +369,6 @@
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
         <p class="modal-naglowek">Zostaw swoje dane w formularzu poniżej</p>
-
         <form class="formularz-uslug">
           <label> Imie </label>
           <div class="pole-formularza">
@@ -378,7 +377,6 @@
             </svg>
             <input type="text" name="imie" />
           </div>
-
           <label> Telefon </label>
           <div class="pole-formularza">
             <svg width="15" height="15">
@@ -386,7 +384,6 @@
             </svg>
             <input type="tel" name="telefon" />
           </div>
-
           <label> Email </label>
           <div class="pole-formularza">
             <svg width="15" height="15">
@@ -394,31 +391,19 @@
             </svg>
             <input type="email" name="email" />
           </div>
-
           <label> Komentarz </label>
           <textarea
             name="komentarz"
             placeholder="Wprowadź tekst ..."
           ></textarea>
-
           <div class="akcept-regulamin">
-            <input
-              type="checkbox"
-              width="16px"
-              height="15px"
-              name="regulamin"
-              value="akcept"
-              required
-            />
+            <input type="checkbox" name="regulamin" value="akcept" required />
             <label>
-              Oświadczam iż akceptuję
-              <a href="#">Regulamin</a>
-              i
+              Oświadczam iż akceptuję <a href="#">Regulamin</a> i
               <a href="#">Politykę Prywatności.</a>
             </label>
           </div>
         </form>
-
         <button type="submit" class="przycisk-wyslij">Wyślij</button>
       </div>
     </div>
