@@ -690,17 +690,17 @@ footer {
   align-items: start;
   width: 100%;
   gap: 10px;
-} 
+}
 
 .formularz-uslug {
   justify-content: center;
   gap: 10px;
-} 
- 
+}
+
 .pole-formularza {
   justify-content: flex-start;
   gap: 4px;
-} 
+}
 
 .pole-formularza > div {
   display: flex;
@@ -790,7 +790,7 @@ footer {
 }
 
 .checkbox-hidden {
-  opacity: 0.0;
+  opacity: 0;
 }
 
 .checkbox-empty,
@@ -824,6 +824,6 @@ input[type="checkbox"]:not(:checked) ~ svg.checkbox-accepted {
   display: none;
 }
 
-.akcept-regulamin > label:focus-within > svg {
+.akcept-regulamin > label:focus-within > .checkbox-empty {
   fill: var(--kolor-logo);
 }
